@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f3f9c517cff0a4d9c601b4ae583ebe, type: 3}
+  m_Name: "\u5E8F\u5E55_HallOutside_2"
+  m_EditorClassIdentifier: 
+  screenKey: "\u5E8F\u5E55_HallOutside_2"
+  dialogueInfos:
+  - characterName: "\uFF1F"
+    dialogueContent: "\u4ED8\u8001\u5E08\uFF0C\u54B1\u4FE9\u80FD\u4E0D\u80FD\u5355\u72EC\u804A\u4E00\u804A\uFF1F"
+  - characterName: "\uFF1F"
+    dialogueContent: "\u6211\u5BB6\u5B69\u5B50\u6700\u8FD1..."
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u770B\u5927\u5BB6\u90FD\u8FD8\u6709\u65F6\u95F4\uFF0C\u4E5F\u6709\u5F88\u591A\u8981\u95EE\u7684\u3002"
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u4E0D\u5982\u6211\u4EEC\u627E\u4E00\u4E2A\u7A7A\u6559\u5BA4\uFF0C\u5750\u4E0B\u6765\u518D\u804A\u4E00\u804A\u3002"
+  - characterName: "\uFF1F"
+    dialogueContent: "\u884C\uFF0C\u5B69\u5B50\u5B66\u6821\u521A\u521A\u5EFA\u8D77\u6765\u4E00\u680B\u5B9E\u9A8C\u697C\u3002 "
+  - characterName: "\uFF1F"
+    dialogueContent: "\u6211\u4EEC\u5C31\u53BB\u90A3\u91CC\u5427\uFF0C\u4E00\u76F4\u6CBF\u7740\u8FD9\u6761\u8DEF\u8D70\u5C31\u662F\u3002 "
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u597D\uFF0C\u5176\u4ED6\u5BB6\u957F\u4E5F\u4E00\u8D77\u5427\u3002"
