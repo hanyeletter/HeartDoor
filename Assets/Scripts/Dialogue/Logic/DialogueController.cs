@@ -13,7 +13,7 @@ public class DialogueController : MonoBehaviour
     {
         EventHandler.CallShowDialogueEvent(dialogueData, DialogueCallback);
     }
-
+        
     protected virtual void Callback()
     {
         Debug.Log("触发对话事件回调");
