@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -6,6 +7,24 @@ using UnityEngine;
 /// </summary>
 public class DialogueController : MonoBehaviour
 {
+    private static Dictionary<string, DialogueData> screenKey2DialogueDataDict;
+
+    public static Dictionary<string, DialogueData> ScreenKey2DialogueDataDict
+    {
+        get
+        {
+            if (screenKey2DialogueDataDict == null)
+            {
+                screenKey2DialogueDataDict = ResourcesUtil.GetAllDialogueDatas();
+            }
+
+            return screenKey2DialogueDataDict;
+        }
+    }
+
+    public static Dictionary<string, Action> screenKey2CallbackDict;
+    
+    [HideInInspector]
     public DialogueData dialogueData = null;
     private Action DialogueCallback = null;
 

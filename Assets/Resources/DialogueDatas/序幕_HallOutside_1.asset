@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4f3f9c517cff0a4d9c601b4ae583ebe, type: 3}
-  m_Name: Stage_3_Hall_1
+  m_Name: "\u5E8F\u5E55_HallOutside_1"
   m_EditorClassIdentifier: 
+  screenKey: "\u5E8F\u5E55_HallOutside_1"
   dialogueInfos:
   - characterName: "\uFF1F"
     dialogueContent: "\u4ED8\u8001\u5E08\uFF0C\u54B1\u4FE9\u80FD\u4E0D\u80FD\u5355\u72EC\u804A\u4E00\u804A\uFF1F"
