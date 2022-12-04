@@ -2,3 +2,6 @@
 Library
 /Library/ArtifactDB
 /Temp
+/*.csproj
+/*.vsconfig
+/*.sln
