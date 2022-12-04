@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueData
+[CreateAssetMenu(menuName = "ScriptableObject/DialogueData")]
+public class DialogueData : ScriptableObject
 {
     public List<DialogueInfo> dialogueInfos;
 }
