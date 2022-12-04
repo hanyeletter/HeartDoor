@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
                     if (currentIndex < dialogueData.dialogueInfos.Count)
                     {
                         characterNameText.text = dialogueData.dialogueInfos[currentIndex].characterName;
-                        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].characterSprite;
+                        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].CharacterSprite;
                         StartCoroutine("ScrollingText");
                     }
                     else
@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
                     if (currentIndex < dialogueData.dialogueInfos.Count)
                     {
                         characterNameText.text = dialogueData.dialogueInfos[currentIndex].characterName;
-                        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].characterSprite;
+                        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].CharacterSprite;
                         dialogueContentText.text = dialogueData.dialogueInfos[currentIndex].dialogueContent;
                     }
                     else
@@ -120,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         //设置回调函数
         this.dialogueCallback = dialogueCallback;
         currentIndex = 0;
-        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].characterSprite;
+        characterImage.sprite = dialogueData.dialogueInfos[currentIndex].CharacterSprite;
         characterNameText.text = dialogueData.dialogueInfos[currentIndex].characterName;
         StartCoroutine("ScrollingText");
         dialogueCanvas.SetActive(true);
