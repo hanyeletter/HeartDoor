@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class HallOutside_DialogueController : DialogueController
 {
-    [Header("当前幕键")]
-    public string curScreenKey;
-
     private void Awake()
     {
         curScreenKey = "序幕_HallOutside_1";

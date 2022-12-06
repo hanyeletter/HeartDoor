@@ -22,15 +22,27 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    public static Dictionary<string, Action> screenKey2CallbackDict;
+    public static Dictionary<string, Action> screenKey2CallbackDict = new Dictionary<string, Action>();
     
     [HideInInspector]
     public DialogueData dialogueData = null;
-    private Action DialogueCallback = null;
+    protected Action dialogueCallback = null;
+    
+    [Header("当前幕键")]
+    protected string curScreenKey;
 
     public void ShowDialogue()
     {
-        EventHandler.CallShowDialogueEvent(dialogueData, DialogueCallback);
+        //直接覆盖订阅，不确定会不会有内存泄漏问题
+        if (screenKey2CallbackDict.TryGetValue(curScreenKey, out Action cb))
+        {
+            dialogueCallback = cb;
+        }
+        else
+        {
+            dialogueCallback = null;
+        }
+        EventHandler.CallShowDialogueEvent(dialogueData, dialogueCallback);
     }
         
     protected virtual void Callback()
@@ -40,11 +52,11 @@ public class DialogueController : MonoBehaviour
 
     private void OnEnable()
     {
-        DialogueCallback += Callback;
+        dialogueCallback += Callback;
     }
 
     private void OnDisable()
     {
-        DialogueCallback -= Callback;
+        dialogueCallback -= Callback;
     }
 }

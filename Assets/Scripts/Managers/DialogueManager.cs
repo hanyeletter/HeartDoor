@@ -41,15 +41,15 @@ public class DialogueManager : MonoBehaviour
     private void OnEnable()
     {
         EventHandler.ShowDialogueEvent += ShowDialogue;
-        EventHandler.BeforeDialogueStartEvent += OnBeforeDialogueStart;
-        EventHandler.AfterDialogueEndEvent += OnAfterDialogueEnd;
+        EventHandler.BeginDialogueEvent += OnBeginDialogue;
+        EventHandler.EndDialogueEvent += OnEndDialogue;
     }
 
     private void OnDisable()
     {
         EventHandler.ShowDialogueEvent -= ShowDialogue;
-        EventHandler.BeforeDialogueStartEvent -= OnBeforeDialogueStart;
-        EventHandler.AfterDialogueEndEvent -= OnAfterDialogueEnd;
+        EventHandler.BeginDialogueEvent -= OnBeginDialogue;
+        EventHandler.EndDialogueEvent -= OnEndDialogue;
     }
 
     private void Start()
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
                     {
                         dialogueCanvas.SetActive(false);
                         //对话结束后触发事件
-                        EventHandler.CallAfterDialogueEndEvent();
+                        EventHandler.CallEndDialogueEvent();
                     }
                 }
                 else
@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
                     {
                         dialogueCanvas.SetActive(false);
                         //对话结束后触发事件
-                        EventHandler.CallAfterDialogueEndEvent();
+                        EventHandler.CallEndDialogueEvent();
                     }
                 }
             }
@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //开始对话前，触发对话前事件
-        EventHandler.CallBeforeDialogueStartEvent();
+        EventHandler.CallBeginDialogueEvent();
         //设置回调函数
         this.dialogueCallback = dialogueCallback;
         currentIndex = 0;
@@ -139,14 +139,14 @@ public class DialogueManager : MonoBehaviour
         isScrolling = false;
     }
 
-    private void OnBeforeDialogueStart()
+    private void OnBeginDialogue()
     {
         Debug.Log("对话开始");
         //对话开始前，触发游戏状态进入暂停的事件
         EventHandler.CallGameStateChangeEvent(GameState.PAUSE);
     }
 
-    private void OnAfterDialogueEnd()
+    private void OnEndDialogue()
     {
         Debug.Log("对话结束");
         //对话结束后，触发游戏状态进入GamePlay的事件

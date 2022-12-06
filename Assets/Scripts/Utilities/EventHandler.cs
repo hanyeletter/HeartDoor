@@ -9,18 +9,18 @@ public static class EventHandler
         ShowDialogueEvent?.Invoke(dialogueInfo, dialogueCallback);
     }
 
-    public static event Action BeforeDialogueStartEvent;
+    public static event Action BeginDialogueEvent;
 
-    public static void CallBeforeDialogueStartEvent()
+    public static void CallBeginDialogueEvent()
     {
-        BeforeDialogueStartEvent?.Invoke();
+        BeginDialogueEvent?.Invoke();
     }
 
-    public static event Action AfterDialogueEndEvent;
+    public static event Action EndDialogueEvent;
 
-    public static void CallAfterDialogueEndEvent()
+    public static void CallEndDialogueEvent()
     {
-        AfterDialogueEndEvent?.Invoke();
+        EndDialogueEvent?.Invoke();
     }
 
     public static event Action<GameState> GameStateChangeEvent;
@@ -28,5 +28,19 @@ public static class EventHandler
     public static void CallGameStateChangeEvent(GameState gameState)
     {
         GameStateChangeEvent?.Invoke(gameState);
+    }
+
+    public static event Action BeginSceneTransitionEvent;
+
+    public static void CallBeginSceneTransitionEvent()
+    {
+        BeginDialogueEvent?.Invoke();
+    }
+    
+    public static event Action EndSceneTransitionEvent;
+
+    public static void CallEndSceneTransitionEvent()
+    {
+        EndSceneTransitionEvent?.Invoke();
     }
 }

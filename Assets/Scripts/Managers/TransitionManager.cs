@@ -38,6 +38,7 @@ public class TransitionManager : MonoBehaviour
 
     private IEnumerator TransitionToScene(string from, string to)
     {
+        EventHandler.CallBeginSceneTransitionEvent();
         yield return Fade(1);
         yield return SceneManager.UnloadSceneAsync(from);
         yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
@@ -45,6 +46,7 @@ public class TransitionManager : MonoBehaviour
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newScene);
         yield return Fade(0);
+        EventHandler.CallEndSceneTransitionEvent();
     }
 
     private IEnumerator Fade(float targetAlhpa)
