@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Persistent.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ZeroScene/Hall.unity
+    guid: d5450468df9b1cb4ca692da95b2d08b1
+  - enabled: 1
+    path: Assets/Scenes/ZeroScene/HallOutside.unity
+    guid: 20cff7b99348420479a5f9a0a2a83205
+  - enabled: 1
+    path: Assets/Scenes/ZeroScene/UnderTheTree.unity
+    guid: 2c77e77a3af693e41b2e9c04e9fa44cf
   m_configObjects: {}

@@ -54,12 +54,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Utilities\Enums.cs" />
+    <Compile Include="Assets\Scripts\Utilities\ResourcesUtil.cs" />
     <Compile Include="Assets\Scripts\Utilities\EventHandler.cs" />
+    <Compile Include="Assets\Scripts\Managers\TransitionManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Data\DialogueInfo.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\HallOutside_DialogueController.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueController.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\Hall_DialogueController.cs" />
     <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueSystemDebugger.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Data\DialogueData.cs" />
+    <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
+    <Compile Include="Assets\Scripts\Transition\TransitionDebugger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

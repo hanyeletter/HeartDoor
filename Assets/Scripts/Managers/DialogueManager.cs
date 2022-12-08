@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueCanvas.activeInHierarchy)
         {
-            Debug.LogError("当前正在对话中，无法执行新对话。");
+            //Debug.LogError("当前正在对话中，无法执行新对话。");
             return;
         }
 
