@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Dialogue\Data\DialogueData.cs" />
     <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionDebugger.cs" />
+    <Compile Include="Assets\Scripts\SceneControllers\HallSceneController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
