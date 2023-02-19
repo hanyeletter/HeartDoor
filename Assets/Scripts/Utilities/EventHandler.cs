@@ -43,4 +43,18 @@ public static class EventHandler
     {
         EndSceneTransitionEvent?.Invoke();
     }
+
+    public static event Action<ItemDetails, int> UpdateInventoryUIEvent;
+
+    public static void CallUpdateInventoryUIEvent(ItemDetails itemDetails,int index)
+    {
+        UpdateInventoryUIEvent?.Invoke(itemDetails, index);
+    }
+
+    public static event Action<ItemName> ItemUsedEvent;
+
+    public static void CallItemUsedEvent(ItemName itemName)
+    {
+        ItemUsedEvent?.Invoke(itemName);
+    }
 }
