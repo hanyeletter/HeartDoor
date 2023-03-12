@@ -6,4 +6,9 @@ public class Teleport : MonoBehaviour
 {
     public string sceneFrom;
     public string sceneTo;
+
+    public void TeleportToScene()
+    {
+        TransitionManager.instance.Transition(sceneFrom,sceneTo);
+    }
 }

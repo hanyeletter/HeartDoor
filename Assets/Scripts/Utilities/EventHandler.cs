@@ -34,7 +34,7 @@ public static class EventHandler
 
     public static void CallBeginSceneTransitionEvent()
     {
-        BeginDialogueEvent?.Invoke();
+        BeginSceneTransitionEvent?.Invoke();
     }
     
     public static event Action EndSceneTransitionEvent;
@@ -56,5 +56,19 @@ public static class EventHandler
     public static void CallItemUsedEvent(ItemName itemName)
     {
         ItemUsedEvent?.Invoke(itemName);
+    }
+
+    public static event Action BeforeSceneUnloadEvent;
+
+    public static void CallBeforeSceneUnloadEvent()
+    {
+        BeforeSceneUnloadEvent?.Invoke();
+    }
+    
+    public static event Action AfterSceneLoadedEvent;
+
+    public static void CallAfterSceneLoadedEvent()
+    {
+        AfterSceneLoadedEvent?.Invoke();
     }
 }
