@@ -11,8 +11,9 @@ public class DialogueSystemDebugger
         DialogueData dialogueData = null;
         GameObject dialogueDebugger = new GameObject("Dialogue Debugger");
         DialogueController dialogueController = dialogueDebugger.AddComponent<DialogueController>();
-        dialogueData = Resources.Load<DialogueData>("DialogueDatas/Stage_1_Hall_1");
+        dialogueData = Resources.Load<DialogueData>("DialogueDatas/第一章_x_2");
         dialogueController.dialogueData = dialogueData;
+        dialogueController.curScreenKey = dialogueData.screenKey;
         dialogueController.ShowDialogue();
         GameObject.DestroyImmediate(dialogueDebugger);
     }

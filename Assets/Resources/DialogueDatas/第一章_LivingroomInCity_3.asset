@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f3f9c517cff0a4d9c601b4ae583ebe, type: 3}
+  m_Name: "\u7B2C\u4E00\u7AE0_LivingroomInCity_3"
+  m_EditorClassIdentifier: 
+  screenKey: "\u7B2C\u4E00\u7AE0_LivingroomInCity_3"
+  dialogueInfos:
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u60A8\u4E8C\u4F4D\u90FD\u51B7\u9759\u4E00\u4E0B\u3002"
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u4E89\u5435\u4E0D\u80FD\u6539\u53D8\u4E8B\u5B9E\u4E86\uFF0C\u8BF7\u5148\u505C\u6B62\u4E92\u76F8\u4F24\u5BB3\u5427\u3002"
+  - characterName: "\u738B\u73CD\u4E91"
+    dialogueContent: "\u5BF9\u4E0D\u8D77\uFF0C\u771F\u7684\u5BF9\u4E0D\u8D77\u3002"
+  - characterName: "\u738B\u73CD\u4E91"
+    dialogueContent: "\u60A8\u770B\u73B0\u5728\u9700\u8981\u6211\u4EEC\u600E\u4E48\u914D\u5408\u5462\uFF1F"
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u662F\u8FD9\u6837\uFF0C\u5149\u51ED\u5B69\u5B50\u7684\u7269\u4EF6\u662F\u5F88\u96BE\u5B8C\u6574\u5730\u5206\u6790\u51FA\u539F\u56E0\u7684\uFF0C\u53EA\u80FD\u662F\u8F85\u52A9\u8B66\u65B9\u53BB\u627E\u5BFB\u4E00\u4E9B\u8BC1\u636E\uFF0C"
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u6211\u4E0D\u80FD\u4E5F\u65E0\u6CD5\u5B9A\u8BBA\u8FD9\u4E2A\u4E8B\u60C5\u7684\u7ED3\u5C40\uFF0C\u5E0C\u671B\u4F60\u4EEC\u7406\u89E3\u3002"
+  - characterName: "\u738B\u73CD\u4E91"
+    dialogueContent: "\u597D...\u597D\u3002"
+  - characterName: "\u4ED8\u4F69"
+    dialogueContent: "\u8BA9\u6211\u5355\u72EC\u53BB\u5B69\u5B50\u623F\u95F4\u770B\u4E00\u4E0B\uFF0C\u4F60\u4EEC\u4E8C\u4F4D\u4E5F\u597D\u597D\u5E73\u590D\u4E00\u4E0B\u5FC3\u60C5\uFF0C\u4E4B\u540E\u6211\u518D\u540C\u4F60\u4EEC\u5546\u91CF\u53EF\u4EE5\u5417\uFF1F"
+  - characterName: "\u738B\u73CD\u4E91"
+    dialogueContent: "\u597D\uFF0C\u8C22\u8C22\u60A8\u4E86\u3002"

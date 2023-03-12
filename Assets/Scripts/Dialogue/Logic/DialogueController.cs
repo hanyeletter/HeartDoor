@@ -29,7 +29,7 @@ public class DialogueController : MonoBehaviour
     protected Action dialogueCallback = null;
     
     [Header("当前幕键")]
-    protected string curScreenKey;
+    public string curScreenKey;
 
     public void ShowDialogue()
     {
