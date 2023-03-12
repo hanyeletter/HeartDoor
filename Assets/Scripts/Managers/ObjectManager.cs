@@ -11,14 +11,14 @@ public class ObjectManager : MonoBehaviour
     {
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadedEvent += OnAfterSceneLoadedEvent;
-        EventHandler.UpdateInventoryUIEvent += OnUpdateInventoryUIEvent;
+        EventHandler.AddItemEvent += OnAddItemEvent;
     }
-    
+
     private void OnDisable()
     {
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadedEvent -= OnAfterSceneLoadedEvent;
-        EventHandler.UpdateInventoryUIEvent -= OnUpdateInventoryUIEvent;
+        EventHandler.AddItemEvent -= OnAddItemEvent;
     }
 
     private void OnBeforeSceneUnloadEvent()
@@ -49,15 +49,11 @@ public class ObjectManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 在拾取物体时、背包显示物体时触发，道具已经在背包，则场景中为false
+    /// 在拾取物体时体时触发，场景中为false
     /// </summary>
-    /// <param name="itemDetails"></param>
-    /// <param name="arg2"></param>
-    private void OnUpdateInventoryUIEvent(ItemDetails itemDetails, int arg2)
+    /// <param name="itemName"></param>
+    private void OnAddItemEvent(ItemName itemName)
     {
-        if (itemDetails != null)
-        {
-            itemAvailableDict[itemDetails.itemName] = false;
-        }
+        itemAvailableDict[itemName] = false;
     }
 }

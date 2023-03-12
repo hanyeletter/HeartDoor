@@ -71,6 +71,8 @@ public class InventoryManager : MonoBehaviour
             itemList.Add(itemName);
             //更新背包UI
             EventHandler.CallUpdateInventoryUIEvent(itemDataList.GetItemDetails(itemName), itemList.Count - 1);
+            //发送“获取道具”事件
+            EventHandler.CallAddItemEvent(itemName);
         }
         else
         {

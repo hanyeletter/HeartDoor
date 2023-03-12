@@ -71,4 +71,11 @@ public static class EventHandler
     {
         AfterSceneLoadedEvent?.Invoke();
     }
+
+    public static event Action<ItemName> AddItemEvent;
+
+    public static void CallAddItemEvent(ItemName itemName)
+    {
+        AddItemEvent?.Invoke(itemName);
+    }
 }
