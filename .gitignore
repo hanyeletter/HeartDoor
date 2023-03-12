@@ -16,3 +16,5 @@ Library
 /obj/Debug/UnityEditor.TestRunner.csprojAssemblyReference.cache
 /obj/Debug/UnityEngine.TestRunner.csprojAssemblyReference.cache
 /obj/Debug/UnityEngine.UI.csprojAssemblyReference.cache
+/Assembly-CSharp.csproj
+/Logs
