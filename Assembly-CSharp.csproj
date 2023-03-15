@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Utilities\Enums.cs" />
+     <Compile Include="Assets\Scripts\Managers\HintUIManager.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryDebugger.cs" />
      <Compile Include="Assets\Scripts\Inventory\UI\InventoryUI.cs" />
      <Compile Include="Assets\Scripts\Utilities\ResourcesUtil.cs" />
@@ -66,11 +67,13 @@
      <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\HallOutside_DialogueController.cs" />
      <Compile Include="Assets\PostProcessing\EdgeDetection.cs" />
      <Compile Include="Assets\PostProcessing\Noise\RenderCubemapWizard.cs" />
+     <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\LivingroomInCity_DialogueController.cs" />
      <Compile Include="Assets\PostProcessing\DepthAndNormal\FogWithDepthTexture.cs" />
      <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueController.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\Hall_DialogueController.cs" />
      <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
      <Compile Include="Assets\PostProcessing\BrightnessSaturationAndConstrast.cs" />
+     <Compile Include="Assets\Scripts\Cursor\CursorManager.cs" />
      <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueSystemDebugger.cs" />
      <Compile Include="Assets\Scripts\Inventory\Logic\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\SceneControllers\HallSceneController.cs" />
@@ -80,13 +83,11 @@
      <Compile Include="Assets\Scripts\Inventory\Data\ItemDataList.cs" />
      <Compile Include="Assets\PostProcessing\Noise\FogWithNoise.cs" />
      <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
+     <Compile Include="Assets\Scripts\Interactive\Interactive.cs" />
      <Compile Include="Assets\Scripts\Transition\TransitionDebugger.cs" />
+     <Compile Include="Assets\Scripts\Managers\ObjectManager.cs" />
      <Compile Include="Assets\PostProcessing\PostEffectsBase.cs" />
      <Compile Include="Assets\PostProcessing\DepthAndNormal\EdgeDetectNormalsAndDepth.cs" />
-     <Compile Include="Assets\Scripts\Dialogue\DialogueControllers\LivingroomInCity_DialogueController.cs" />
-     <Compile Include="Assets\Scripts\Cursor\CursorManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\ObjectManager.cs" />
-     <Compile Include="Assets\Scripts\Interactive\Interactive.cs" />
      <None Include="Assets\PostProcessing\Chapter12-GaussianBlur.shader" />
      <None Include="Assets\PostProcessing\Chapter12-BrightnessSaturationAndContrast 1.shader" />
      <None Include="Assets\PostProcessing\Chapter12-Bloom.shader" />

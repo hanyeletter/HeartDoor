@@ -9,6 +9,7 @@ public class Interactive : MonoBehaviour
 
     public void CheckItem(ItemName itemName)
     {
+        //考虑这里就Check背包中有没有对应道具，有则使用，后续改这里的逻辑
         if (itemName == requireItem && !isDone)
         {
             isDone = true;

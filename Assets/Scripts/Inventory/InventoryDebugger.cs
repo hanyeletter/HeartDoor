@@ -20,13 +20,13 @@ public static class InventoryDebugger
     [MenuItem("运行时调试/背包系统/增加Test道具")]
     static void AddTest()
     {
-        AddItem(ItemName.Test);
+        AddItem(ItemName.郑昊和郑灵的合照);
     }
     
     [MenuItem("运行时调试/背包系统/使用Test")]
     static void UseTest()
     {
-        UseItem(ItemName.Test);
+        UseItem(ItemName.郑昊和郑灵的合照);
     }
 
     private static void AddItem(ItemName itemName)

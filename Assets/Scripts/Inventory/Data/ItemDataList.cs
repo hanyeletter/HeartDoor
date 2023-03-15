@@ -8,7 +8,7 @@ public class ItemDataList : ScriptableObject
     public List<ItemDetails> itemDetailsList;
 
     public ItemDetails GetItemDetails(ItemName itemName)
-    {
+    { 
         ItemDetails itemDetails = itemDetailsList.Find(i => i.itemName == itemName);
         return itemDetails.IsValid() ? itemDetails : null;
     }
