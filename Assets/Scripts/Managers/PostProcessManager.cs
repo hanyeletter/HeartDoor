@@ -57,13 +57,13 @@ public class PostProcessManager : MonoBehaviour
         int iter = (int)(waterWaveDuration / waterWaveSpeed);
         for (int i = 0; i < iter; i++)
         {
-            waterWave.offsetStrength += waterWaveSpeed;
+            waterWave.offsetStrength += (waterWaveSpeed / waterWaveDuration);
             yield return new WaitForSeconds(waterWaveSpeed);
         }
         
         for (int i = 0; i < iter; i++)
         {
-            waterWave.offsetStrength -= waterWaveSpeed;
+            waterWave.offsetStrength -= (waterWaveSpeed / waterWaveDuration);
             yield return new WaitForSeconds(waterWaveSpeed);
         }
 
