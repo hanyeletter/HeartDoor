@@ -166,7 +166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341916439
 GameObject:
@@ -347,6 +347,8 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420036}
+  - component: {fileID: 519420037}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -448,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gaussianBlurShader: {fileID: 4800000, guid: 801e44cd3a7b84b45a60f7b9b2410ffe, type: 3}
-  iterations: 3
+  iterations: 2
   blurSpread: 0.6
   downSample: 2
 --- !u!114 &519420034
@@ -464,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloomShader: {fileID: 4800000, guid: d6b69ff069f1b404cafbc6f63cf74dd3, type: 3}
-  iterations: 3
+  iterations: 2
   blurSpread: 0.6
   downSample: 2
   luminanceThreshold: 0.6
@@ -481,9 +483,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   briSatConShader: {fileID: 4800000, guid: a43717fed52f49d49923ca6ad32a4330, type: 3}
-  brightness: 1
-  saturation: 1
-  contrast: 1
+  brightness: 0.56
+  saturation: 1.16
+  contrast: 1.01
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c291670270b6a344eb3ec7b5ca4df256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainBlurShader: {fileID: 4800000, guid: 152ef78a653a3e140a3b751204e37aae, type: 3}
+--- !u!114 &519420037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2083a94975d4145ade68ef749febee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterWaveShader: {fileID: 4800000, guid: 3e4b3e3a1cd62944d837165b5ca0a330, type: 3}
+  waveFrequency: 200
+  waveSpeed: 5
+  offsetStrength: 1
+  waveRadius: 0.2
+  waveCenterCount: 10
 --- !u!1 &561351237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3778231547996269275, guid: 680e1755ddd19cf4d9b2f3a5297f0cda, type: 3}
@@ -530,7 +563,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &756183033 stripped
 MonoBehaviour:
@@ -679,7 +712,7 @@ RectTransform:
   m_Children:
   - {fileID: 341916440}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -781,7 +814,7 @@ RectTransform:
   - {fileID: 825305499}
   - {fileID: 944409437}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -824,6 +857,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1157264710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1157264712}
+  - component: {fileID: 1157264711}
+  m_Layer: 0
+  m_Name: PostProcessManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1157264711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157264710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e353d6ff2909304e8e0669985126154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterWaveDuration: 1
+--- !u!4 &1157264712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157264710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177004395
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +925,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177004395}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d34d3e4bf17419429341b323592136d, type: 3}
   m_Name: 
@@ -1296,7 +1373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825340662
 GameObject:
@@ -1418,7 +1495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091917638
 GameObject:
