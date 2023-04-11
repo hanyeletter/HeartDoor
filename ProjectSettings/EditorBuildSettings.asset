@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ZeroScene/HsRoomInCity.unity
     guid: c3c34cafa68f9d846aae24ca3db7c2c6
+  - enabled: 1
+    path: Assets/Scenes/GamesScenes/Huarongdao.unity
+    guid: fbe47f8c6c6fc0c4f9a47cc0b2bb8974
+  - enabled: 1
+    path: Assets/Scenes/GamesScenes/ReflectLight.unity
+    guid: ffc33a69746b96b4582b66b0bd407f51
   m_configObjects: {}

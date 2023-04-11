@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Teleport
+  - LightReceiver
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - smallGame
   - Water
   - UI
   - 
@@ -47,4 +48,7 @@ TagManager:
     locked: 0
   - name: sprite
     uniqueID: 2094307233
+    locked: 0
+  - name: smallGames
+    uniqueID: 3886885633
     locked: 0
